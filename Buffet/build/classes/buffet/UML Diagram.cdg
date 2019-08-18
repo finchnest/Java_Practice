@@ -1,0 +1,443 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="Buffet">
+  <ClassDiagramComponents>
+    <Class name="Advertizer" package="buffet" visibility="public" xPosition="698.0" yPosition="217.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="advertViaTv" returnType="void" visibility="public"/>
+        <Method name="advertViaInternet" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="AppAdmin" package="buffet" visibility="public" xPosition="16.0" yPosition="20.0">
+      <Fields>
+        <Field name="username" type="String" visibility="package"/>
+        <Field name="password" type="String" visibility="package"/>
+        <Field name="account_no" type="long" visibility="package"/>
+        <Field name="sc" type="Scanner" visibility="package"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="addCustomer" returnType="void" visibility="public"/>
+        <Method name="addProvider" returnType="void" visibility="public"/>
+        <Method name="addAdvertizement" returnType="void" visibility="public"/>
+        <Method name="registeredUsers" returnType="void" visibility="public"/>
+        <Method name="registeredProviders" returnType="void" visibility="public"/>
+        <Method name="deleteProvider" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Buffet" package="buffet" visibility="public" xPosition="407.0" yPosition="20.0">
+      <Fields>
+        <Field name="choice" type="int" visibility="private" isStatic="true"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String[]" name="args"/>
+        </Method>
+        <Method name="afterOptions" returnType="void" visibility="public">
+          <Argument type="String" name="food_name"/>
+          <Argument type="String" name="customer"/>
+          <Argument type="String" name="provider_name"/>
+        </Method>
+        <Method name="showError" returnType="void" visibility="public" isStatic="true"/>
+      </Methods>
+    </Class>
+    <Class name="DataHandler" package="buffet" visibility="public" xPosition="946.0" yPosition="759.0">
+      <Fields>
+        <Field name="validPro" type="boolean" visibility="package" isStatic="true"/>
+        <Field name="validCustomer" type="boolean" visibility="package" isStatic="true"/>
+        <Field name="usertype" type="String" visibility="package" isStatic="true"/>
+        <Field name="just_user" type="boolean" visibility="package" isStatic="true"/>
+        <Field name="found_name" type="boolean" visibility="package" isStatic="true"/>
+        <Field name="item_price" type="double" visibility="package" isStatic="true"/>
+        <Field name="bankId" type="double" visibility="package" isStatic="true"/>
+        <Field name="pro_bank_id" type="double" visibility="package" isStatic="true"/>
+        <Field name="balance" type="double" visibility="package" isStatic="true"/>
+        <Field name="validOrder" type="boolean" visibility="package" isStatic="true"/>
+        <Field name="comp_found" type="boolean" visibility="package" isStatic="true"/>
+        <Field name="validAdmin" type="boolean" visibility="package" isStatic="true"/>
+        <Field name="valid_bank_user" type="boolean" visibility="package" isStatic="true"/>
+        <Field name="bank_user_provider" type="boolean" visibility="package" isStatic="true"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="addFoodItem" returnType="void" visibility="public">
+          <Argument type="Food" name="food"/>
+        </Method>
+        <Method name="checkProviderExistence" returnType="void" visibility="public">
+          <Argument type="String" name="username"/>
+          <Argument type="String" name="password"/>
+        </Method>
+        <Method name="removeFoodItem" returnType="void" visibility="public">
+          <Argument type="String" name="foodName"/>
+          <Argument type="String" name="provider_name"/>
+        </Method>
+        <Method name="displayProviderFoods" returnType="void" visibility="public">
+          <Argument type="String" name="username"/>
+        </Method>
+        <Method name="foodRating" returnType="void" visibility="public">
+          <Argument type="String" name="username"/>
+        </Method>
+        <Method name="userComments" returnType="void" visibility="public">
+          <Argument type="String" name="username"/>
+        </Method>
+        <Method name="users" returnType="void" visibility="public">
+          <Argument type="String" name="provider"/>
+        </Method>
+        <Method name="checkUserExistence" returnType="void" visibility="public">
+          <Argument type="String" name="username"/>
+          <Argument type="String" name="password"/>
+        </Method>
+        <Method name="justUserCheckerForNotification" returnType="void" visibility="public">
+          <Argument type="String" name="username"/>
+        </Method>
+        <Method name="searchByName" returnType="void" visibility="public">
+          <Argument type="String" name="food_name"/>
+        </Method>
+        <Method name="buy" returnType="void" visibility="public">
+          <Argument type="String" name="customer"/>
+          <Argument type="String" name="food_name"/>
+          <Argument type="String" name="provider_name"/>
+        </Method>
+        <Method name="searchByComp" returnType="void" visibility="public">
+          <Argument type="String" name="comp"/>
+        </Method>
+        <Method name="searchTopRated" returnType="void" visibility="public"/>
+        <Method name="displayMessage" returnType="void" visibility="public">
+          <Argument type="String" name="customer"/>
+        </Method>
+        <Method name="userFoods" returnType="void" visibility="public">
+          <Argument type="String" name="customer"/>
+        </Method>
+        <Method name="rate" returnType="void" visibility="public">
+          <Argument type="String" name="food_name"/>
+          <Argument type="int" name="rate"/>
+          <Argument type="String" name="pro"/>
+        </Method>
+        <Method name="commentFood" returnType="void" visibility="public">
+          <Argument type="String" name="food_name"/>
+          <Argument type="String" name="customer"/>
+          <Argument type="String" name="provider"/>
+          <Argument type="String" name="comment"/>
+        </Method>
+        <Method name="shareFriend" returnType="void" visibility="public">
+          <Argument type="String" name="message"/>
+          <Argument type="String" name="customer"/>
+          <Argument type="String" name="other_user"/>
+        </Method>
+        <Method name="checkAdminValidity" returnType="void" visibility="public">
+          <Argument type="String" name="admin_name"/>
+          <Argument type="String" name="admin_pass"/>
+        </Method>
+        <Method name="registerUser" returnType="void" visibility="public">
+          <Argument type="String" name="usern"/>
+          <Argument type="String" name="passw"/>
+          <Argument type="String" name="address"/>
+          <Argument type="String" name="type"/>
+          <Argument type="double" name="bank_id"/>
+        </Method>
+        <Method name="registerProvider" returnType="void" visibility="public">
+          <Argument type="String" name="pro_name"/>
+          <Argument type="String" name="passwo"/>
+          <Argument type="String" name="address"/>
+          <Argument type="double" name="bank_id"/>
+        </Method>
+        <Method name="addAdvert" returnType="void" visibility="public">
+          <Argument type="String" name="advertizer"/>
+          <Argument type="String" name="advertizement"/>
+        </Method>
+        <Method name="allUsers" returnType="void" visibility="public"/>
+        <Method name="allProviders" returnType="void" visibility="public"/>
+        <Method name="randomAd" returnType="void" visibility="public"/>
+        <Method name="removeSeller" returnType="void" visibility="public">
+          <Argument type="String" name="name"/>
+          <Argument type="int" name="sheetNo"/>
+        </Method>
+        <Method name="changePassword" returnType="void" visibility="public">
+          <Argument type="String" name="username"/>
+          <Argument type="String" name="pass"/>
+          <Argument type="int" name="sheetNo"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Food" package="buffet" visibility="public" xPosition="115.0" yPosition="391.0">
+      <Fields>
+        <Field name="name" type="String" visibility="private"/>
+        <Field name="price" type="double" visibility="private"/>
+        <Field name="rating" type="double" visibility="private"/>
+        <Field name="provider" type="FoodProviders" visibility="private"/>
+        <Field name="prov_nam" type="String" visibility="private"/>
+        <Field name="user" type="User" visibility="private"/>
+        <Field name="food_type" type="String" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="FoodProviders" name="provider"/>
+          <Argument type="String" name="food_type"/>
+          <Argument type="String" name="food_name"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getProv_nam" returnType="String" visibility="public"/>
+        <Method name="getName" returnType="String" visibility="public"/>
+        <Method name="getProvider" returnType="FoodProviders" visibility="public"/>
+        <Method name="getFood_type" returnType="String" visibility="public"/>
+        <Method name="getPrice" returnType="double" visibility="public"/>
+        <Method name="setPrice" returnType="void" visibility="public">
+          <Argument type="double" name="price"/>
+        </Method>
+        <Method name="getRating" returnType="double" visibility="public"/>
+        <Method name="setRating" returnType="void" visibility="public">
+          <Argument type="double" name="rating"/>
+        </Method>
+        <Method name="getUser" returnType="User" visibility="public"/>
+        <Method name="setUser" returnType="void" visibility="public">
+          <Argument type="User" name="user"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="FoodProviders" package="buffet" visibility="public" xPosition="40.0" yPosition="959.0">
+      <Fields>
+        <Field name="proname" type="String" visibility="package"/>
+        <Field name="password" type="String" visibility="package"/>
+        <Field name="address" type="String" visibility="package"/>
+        <Field name="provider_bank_id" type="double" visibility="package"/>
+        <Field name="sc" type="Scanner" visibility="package"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="String" name="username"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="addFoodProduct" returnType="void" visibility="public">
+          <Argument type="String" name="username"/>
+        </Method>
+        <Method name="removeFood" returnType="void" visibility="public">
+          <Argument type="String" name="username"/>
+        </Method>
+        <Method name="myItems" returnType="void" visibility="public">
+          <Argument type="String" name="username"/>
+        </Method>
+        <Method name="ratings" returnType="void" visibility="public">
+          <Argument type="String" name="username"/>
+        </Method>
+        <Method name="myComments" returnType="void" visibility="public">
+          <Argument type="String" name="username"/>
+        </Method>
+        <Method name="myUsers" returnType="void" visibility="public">
+          <Argument type="String" name="username"/>
+        </Method>
+        <Method name="changePass" returnType="void" visibility="public">
+          <Argument type="String" name="username"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Menu" package="buffet" visibility="public" xPosition="218.0" yPosition="20.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="navigationMenu" returnType="void" visibility="public"/>
+        <Method name="providerMenu" returnType="void" visibility="public"/>
+        <Method name="userMenu" returnType="void" visibility="public"/>
+        <Method name="buyingOptions" returnType="void" visibility="public"/>
+        <Method name="afterBuying" returnType="void" visibility="public"/>
+        <Method name="adminMenu" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Person" package="buffet" visibility="public" isAbstract="true" xPosition="943.0" yPosition="-11.0">
+      <Fields>
+        <Field name="username" type="String" visibility="private"/>
+        <Field name="password" type="String" visibility="private"/>
+        <Field name="address" type="String" visibility="private"/>
+        <Field name="user_bank_id" type="double" visibility="private"/>
+        <Field name="user_type" type="String" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="String" name="username"/>
+          <Argument type="String" name="password"/>
+          <Argument type="String" name="address"/>
+          <Argument type="double" name="user_bank_id"/>
+          <Argument type="String" name="user_type"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getUsername" returnType="String" visibility="public"/>
+        <Method name="getPassword" returnType="String" visibility="public"/>
+        <Method name="getAddress" returnType="String" visibility="public"/>
+        <Method name="getUser_bank_id" returnType="double" visibility="public"/>
+        <Method name="getUser_type" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="User" package="buffet" visibility="public" xPosition="946.0" yPosition="391.0">
+      <Fields>
+        <Field name="sc" type="Scanner" visibility="package"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="String" name="userName"/>
+          <Argument type="String" name="Password"/>
+          <Argument type="String" name="Address"/>
+          <Argument type="double" name="User_bank_id"/>
+          <Argument type="String" name="User_type"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="searchByName" returnType="void" visibility="public">
+          <Argument type="String" name="customer"/>
+        </Method>
+        <Method name="searchByCompany" returnType="void" visibility="public">
+          <Argument type="String" name="customer"/>
+        </Method>
+        <Method name="searchByTopRated" returnType="void" visibility="public">
+          <Argument type="String" name="customer"/>
+        </Method>
+        <Method name="seeMyNotifications" returnType="void" visibility="public">
+          <Argument type="String" name="customer"/>
+        </Method>
+        <Method name="myFoods" returnType="void" visibility="public">
+          <Argument type="String" name="customer"/>
+        </Method>
+        <Method name="rate" returnType="void" visibility="public">
+          <Argument type="String" name="food_name"/>
+          <Argument type="String" name="pro"/>
+        </Method>
+        <Method name="comment" returnType="void" visibility="public">
+          <Argument type="String" name="food_name"/>
+          <Argument type="String" name="customer"/>
+          <Argument type="String" name="provider_name"/>
+        </Method>
+        <Method name="shareTo" returnType="void" visibility="public">
+          <Argument type="String" name="food_name"/>
+          <Argument type="String" name="customer"/>
+          <Argument type="String" name="provider_name"/>
+        </Method>
+        <Method name="changePass" returnType="void" visibility="public">
+          <Argument type="String" name="customer"/>
+        </Method>
+        <Method name="removeMyAccount" returnType="void" visibility="public">
+          <Argument type="String" name="username"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Interface name="AdvertizmentOptions" package="buffet" visibility="public" xPosition="407.0" yPosition="217.0">
+      <Methods>
+        <Method name="advertViaTv" returnType="void" visibility="package"/>
+        <Method name="advertViaInternet" returnType="void" visibility="package"/>
+      </Methods>
+    </Interface>
+    <Interface name="DataOperations" package="buffet" visibility="public" xPosition="359.0" yPosition="1055.0">
+      <Methods>
+        <Method name="addFoodItem" returnType="void" visibility="package">
+          <Argument type="Food" name="food"/>
+        </Method>
+        <Method name="checkProviderExistence" returnType="void" visibility="package">
+          <Argument type="String" name="username"/>
+          <Argument type="String" name="password"/>
+        </Method>
+        <Method name="removeFoodItem" returnType="void" visibility="package">
+          <Argument type="String" name="foodName"/>
+          <Argument type="String" name="provider_name"/>
+        </Method>
+        <Method name="displayProviderFoods" returnType="void" visibility="package">
+          <Argument type="String" name="username"/>
+        </Method>
+        <Method name="foodRating" returnType="void" visibility="package">
+          <Argument type="String" name="username"/>
+        </Method>
+        <Method name="userComments" returnType="void" visibility="package">
+          <Argument type="String" name="username"/>
+        </Method>
+        <Method name="buy" returnType="void" visibility="package">
+          <Argument type="String" name="customer"/>
+          <Argument type="String" name="food_name"/>
+          <Argument type="String" name="provider_name"/>
+        </Method>
+        <Method name="users" returnType="void" visibility="package">
+          <Argument type="String" name="provider"/>
+        </Method>
+        <Method name="checkUserExistence" returnType="void" visibility="package">
+          <Argument type="String" name="username"/>
+          <Argument type="String" name="password"/>
+        </Method>
+        <Method name="justUserCheckerForNotification" returnType="void" visibility="package">
+          <Argument type="String" name="username"/>
+        </Method>
+        <Method name="searchByName" returnType="void" visibility="package">
+          <Argument type="String" name="food_name"/>
+        </Method>
+        <Method name="searchByComp" returnType="void" visibility="package">
+          <Argument type="String" name="comp"/>
+        </Method>
+        <Method name="searchTopRated" returnType="void" visibility="package"/>
+        <Method name="displayMessage" returnType="void" visibility="package">
+          <Argument type="String" name="customer"/>
+        </Method>
+        <Method name="userFoods" returnType="void" visibility="package">
+          <Argument type="String" name="customer"/>
+        </Method>
+        <Method name="rate" returnType="void" visibility="package">
+          <Argument type="String" name="food_name"/>
+          <Argument type="int" name="rate"/>
+          <Argument type="String" name="pro"/>
+        </Method>
+        <Method name="commentFood" returnType="void" visibility="package">
+          <Argument type="String" name="food_name"/>
+          <Argument type="String" name="customer"/>
+          <Argument type="String" name="provider"/>
+          <Argument type="String" name="comment"/>
+        </Method>
+        <Method name="shareFriend" returnType="void" visibility="package">
+          <Argument type="String" name="message"/>
+          <Argument type="String" name="customer"/>
+          <Argument type="String" name="other_user"/>
+        </Method>
+        <Method name="checkAdminValidity" returnType="void" visibility="package">
+          <Argument type="String" name="admin_name"/>
+          <Argument type="String" name="admin_pass"/>
+        </Method>
+        <Method name="registerUser" returnType="void" visibility="package">
+          <Argument type="String" name="usern"/>
+          <Argument type="String" name="passw"/>
+          <Argument type="String" name="address"/>
+          <Argument type="String" name="type"/>
+          <Argument type="double" name="bank_id"/>
+        </Method>
+        <Method name="registerProvider" returnType="void" visibility="package">
+          <Argument type="String" name="pro_name"/>
+          <Argument type="String" name="passwo"/>
+          <Argument type="String" name="address"/>
+          <Argument type="double" name="bank_id"/>
+        </Method>
+        <Method name="addAdvert" returnType="void" visibility="package">
+          <Argument type="String" name="advertizer"/>
+          <Argument type="String" name="advertizement"/>
+        </Method>
+        <Method name="allUsers" returnType="void" visibility="package"/>
+        <Method name="allProviders" returnType="void" visibility="package"/>
+        <Method name="randomAd" returnType="void" visibility="package"/>
+        <Method name="removeSeller" returnType="void" visibility="package">
+          <Argument type="String" name="name"/>
+          <Argument type="int" name="sheetNo"/>
+        </Method>
+      </Methods>
+    </Interface>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <HasRelation name="user" source="buffet.Food" target="buffet.User" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="buffet.DataHandler" target="buffet.Food" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="buffet.Food" target="buffet.FoodProviders" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="buffet.DataHandler" target="buffet.DataOperations"/>
+    <IsRelation name="is" source="buffet.User" target="buffet.Person"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="buffet.Advertizer" target="buffet.AdvertizmentOptions"/>
+    <UseRelation source="buffet.Food" target="buffet.User" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="buffet.DataOperations" target="buffet.Food" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="provider" source="buffet.Food" target="buffet.FoodProviders" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+  </ClassDiagramRelations>
+</ClassDiagram>
